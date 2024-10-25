@@ -1,0 +1,388 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background: rgba(217, 217, 217, 0.25);
+}  
+
+body, .main{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.logo{
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.company-logo{
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 2.8rem;
+    right: 3rem;
+    z-index: 1000;
+}
+
+nav {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: flex;
+    font-family: 'Noto Sans', sans-serif;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    font-weight: 700;
+}
+
+/* Styling on hover */
+nav a:hover {
+    color: rgb(197, 145, 68); /* Change text color on hover */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 2.5px;
+}
+
+nav.scrolled .menu-toggle {
+    display: block; /* Show the hamburger icon when scrolling */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Positioning below the menu toggle */
+    top: 3.2rem; /* Adjust this value to position below the hamburger icon */
+    right: 3rem; /* Align with the hamburger icon */
+    background-color: white; /* Background color */
+    border: 1px solid #ccc; /* Border for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 999; /* Above other elements */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px; /* Adjust for size */
+}
+
+.dropdown-menu li a {
+    color: black; /* Text color */
+    text-decoration: none;
+    display: block; /* Full width clickable area */
+}
+.dropdown-menu li a:hover {
+    color: rgb(197, 145, 68); /* Change text color on hover */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/* Show the dropdown when toggled */
+.dropdown-menu.show {
+    display: block; /* Show the menu */
+    background-color:rgba(187, 171, 27, 0.08); 
+    border: none;
+    width: 9rem;
+}
+
+.company-title{
+    font-family: "Noto Sans";
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 5rem;
+    letter-spacing: 1px;
+    background: linear-gradient(0deg, #6A2E11 0%, #D4591E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0.1rem;
+    text-align: center;
+}
+
+.moto{
+    color: #000;
+    font-family: "Noto Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0.1rem;
+    text-align: center;
+}
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.hero-start{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.hero-head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    align-content: flex-end;
+}
+
+.hero-icon{
+    left: 10rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.hero-image{
+    width: 50%;
+    position: relative;
+    height: auto;
+    right: 10%;
+}
+
+.design, .development-and, .digital-marketing{
+    letter-spacing: 1px;
+    line-height: 3.8rem;
+    font-weight: 800;
+    font-family: 'Noto Sans';
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.development-and {
+    color: #b24b1a;
+}
+.consultation-box{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    margin: 1rem 2.25rem 1rem 1rem;
+}
+.consultation-box-container {
+    display: flex;
+    border-radius: 2.5rem 0 2.5rem 0;
+    background-color: rgba(217, 217, 217, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    width: 40rem;
+    height: 12rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    flex-wrap: wrap;
+}
+
+.consultation-box-desc {
+    position: relative;
+    top: 0.8rem;
+    left: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.25px;
+    line-height: 0.5rem;
+    margin: 0.5rem;
+    width: fit-content;
+    font-family: 'Noto Sans';
+}
+
+.consultation-box-title {
+    position: relative;
+    left: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    font-weight: 450;
+    margin: 0.5rem;
+    width: fit-content;
+    font-family: 'Noto Sans';
+}
+
+.fname-box, .mail-box, .request-box{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2rem;
+}
+
+input#first-name, input#email {
+    letter-spacing: 1px;
+    line-height: 3.75rem;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    position: relative;
+    border-radius: 2.5rem;
+    background-color: rgba(251, 247, 247, 0.8);
+    width: 10rem;
+    height: 2.5rem;
+}
+
+#request-button {
+    position: relative;
+    border-radius: 2.5rem;
+    width: 10rem;
+    height: 2.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: rgba(187, 171, 27, 0.41);
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+#request-button:hover {
+    background-color: rgba(213, 175, 21, 0.50);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1024px){
+    
+    body, .main{
+        width:100vw;
+    }
+
+    nav a{
+        padding: 10px 15px;
+    }
+
+    .company-title{
+        font-size: 3.5rem;
+        line-height: 4.25rem;
+    }
+
+    .moto{
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    .design, .development-and, .digital-marketing{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    input#first-name, input#email {
+        font-size: 0.85rem;
+        line-height: 3rem;
+    }
+    
+    #request-button{
+        font-size: 0.85rem;
+    }
+}
+
+
+@media (max-width: 768px){
+    
+    body, .main{
+        width: 100vw;
+    }
+
+    nav ul{
+        padding: 10px
+    }
+
+    nav a{
+        padding: 5px 10px;
+        font-weight: 600;
+    }
+
+    .company-title {
+        font-size: 3rem;
+        line-height: 3.75rem;
+    }
+
+    .moto {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .hero-start{
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .design, .development-and, .digital-marketing {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .consultation-box{
+        padding: 1rem;
+    }
+
+    .consultation-box-desc{
+        top: 1rem;
+        left: 2.5rem;
+    }
+
+    .consultation-box-title{
+       left: 2.5rem;
+    }
+
+    .fname-box, .mail-box, .request-box{
+        margin-left: 2.5rem;
+    }
+
+}    
+
+@media (max-width: 425px) {
+    nav ul:nth-of-type(2) {
+        display: none; /* Hide main nav on small screens */
+    }
+    .menu-toggle {
+        display: block; /* Show menu toggle icon */
+    }
+}
