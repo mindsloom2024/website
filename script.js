@@ -5,23 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to handle resizing the window
     function handleResize() {
-        console.log("Resizing window...");
-        if (window.innerWidth <= 425) {
+        if (window.innerWidth < 842) {
             mainNav.style.display = "none"; // Hide main nav on small screens
             menuToggle.style.display = "block"; // Show menu toggle icon
-            dropdownMenu.classList.remove("show"); // Hide dropdown if resizing down
-            console.log("Small screen: main nav hidden, menu toggle shown");
         } else {
             mainNav.style.display = "flex"; // Show main nav on larger screens
             menuToggle.style.display = "none"; // Hide menu toggle icon
             dropdownMenu.classList.remove("show"); // Ensure dropdown is hidden
-            console.log("Large screen: main nav shown, menu toggle hidden");
         }
     }
 
     // Function to handle scroll on larger screens
     function handleScroll() {
-        if (window.innerWidth > 425) {
+        if (window.innerWidth >= 842) {
             if (window.scrollY > 50) {
                 menuToggle.style.display = "block";
             } else {
