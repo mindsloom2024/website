@@ -1,110 +1,156 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;500;600;700;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <!-- Header -->
 
-    <header>
-      <div class="logo">
-        <img class="company-logo" alt="" src="company-logo.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+</head>
+
+<body>
+  <!-- Header -->
+
+  <header>
+    <div class="logo">
+      <img class="company-logo" alt="" src="company-logo.png" />
+    </div>
+    <nav aria-label="Main navigation">
+      <div class="menu-toggle" id="menu-toggle">
+        &#9776;
+        <!-- Hamburger icon -->
       </div>
-      <nav aria-label="Main navigation">
-        <div class="menu-toggle" id="menu-toggle">
-          &#9776;
-          <!-- Hamburger icon -->
-        </div>
-        <ul class="dropdown-menu" id="dropdown-menu">
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#our-work-section">Our Work</a></li>
-          <li><a href="#services-section">Services</a></li>
-          <li><a href="#why-mindsloom-section">Why Us</a></li>
-          <li><a href="#blog-button">Blogs</a></li>
-          <li><a href="#contact-section">Contact Us</a></li>
-        </ul>
-        <ul>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#our-work-section">Our Work</a></li>
-          <li><a href="#services-section">Services</a></li>
-          <li><a href="#why-mindsloom-section">Why Us</a></li>
-          <li><a href="#blog-button">Blogs</a></li>
-          <li><a href="#contact-section">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div class="close-menu" id="close-menu">
+        &times;
+        <!--Close menu icon-->
+      </div>
+      <ul class="dropdown-menu" id="dropdown-menu">
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#our-work-section">Our Work</a></li>
+        <li><a href="#services-section">Services</a></li>
+        <li><a href="#why-mindsloom-section">Why Us</a></li>
+        <li><a href="#blog-button">Blogs</a></li>
+        <li><a href="#contact-section">Contact Us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#our-work-section">Our Work</a></li>
+        <li><a href="#services-section">Services</a></li>
+        <li><a href="#why-mindsloom-section">Why Us</a></li>
+        <li><a href="#blog-button">Blogs</a></li>
+        <li><a href="#contact-section">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
 
-    <main>
-      <!-- Hero Section -->
-      <section id="hero-section">
-        <video autoplay muted loop playsinline class="background-video">
-          <source src="bg-video.mp4" type="video/mp4" />
-          <!-- Main video file -->
-          <source src="bg-video.webm" type="video/webm" />
-          <!-- Alternative format -->
-          Your browser does not support the video tag.
-        </video>
-        <div class="hero-container">
-          <h1 class="company-title">MindsLoom</h1>
-          <h4 class="moto">Where Minds Weave and Ideas Intertwine</h4>
-          <div class="hero">
-            <div class="hero-start">
-              <div class="hero-head">
-                <h2 class="design">Design,</h2>
-                <h2 class="development-and">Development &</h2>
-                <h2 class="digital-marketing">Digital Marketing</h2>
-              </div>
-              <div class="hero-icon">
-                <img class="hero-image" alt="" src="hero-image.png" />
-              </div>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero-section">
+      <div class="hero-container">
+        <h1 class="company-title">MindsLoom</h1>
+        <h2 class="moto">Where Minds Weave and Ideas Intertwine</h2>
+        <div class="hero">
+          <div class="hero-start">
+            <div class="hero-head">
+              <h2 class="design transition-heading">Design,</h2>
+              <h2 class="development-and transition-heading">Development &</h2>
+              <h2 class="digital-marketing transition-heading">Digital Marketing</h2>
             </div>
-            <div class="consultation-box">
-              <div class="consultation-box-container">
-                <p class="consultation-box-desc">
-                  We are going to create a result driven optimal marketing
-                  strategy for your business.
-                </p>
-                <p class="consultation-box-title">
-                  Free 30 Min Digital Marketing Consultation
-                </p>
-                <div class="fname-box">
-                  <input
-                    type="text"
-                    id="first-name"
-                    placeholder="  👤  First Name"
-                    required
-                  />
-                </div>
-                <div class="mail-box">
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="  ✉️  Email"
-                    required
-                  />
-                </div>
-                <div class="request-box">
-                  <button id="request-button">Request</button>
-                </div>
+            <div class="hero-icon">
+              <img class="hero-image" alt="" src="hero-image.png" />
+            </div>
+          </div>
+          <div class="consultation-box">
+            <div class="consultation-box-container">
+              <p class="consultation-box-desc">
+                We are going to create a result driven optimal marketing
+                strategy for your business.
+              </p>
+              <h3 class="consultation-box-title">
+                Free 30 Min Digital Marketing Consultation
+              </h3>
+              <div class="fname-box">
+                <input type="text" id="first-name" placeholder="👤  First Name" required />
+              </div>
+              <div class="mail-box">
+                <input type="email" id="email" placeholder="✉️  Email" required />
+              </div>
+              <div class="request-box">
+                <button id="request-button">Request</button>
               </div>
             </div>
           </div>
+          <!-- Alert message display -->
+          <div id="alert-message" class="alert"></div>
         </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </section>
+
+    <!--Service Section-->
+
+    <Section id="services-section">
+      <h2 id="services-heading" class="services-included">
+        <span>Services </span>
+        <span class="connect">Included</span>
+      </h2>
+      <div class="services-container">
+        <div class="creative">
+          <div class="creative-container">
+            <b class="creative1">Creative</b>
+            <ul class="service-ul">
+              <li>Content Writing</li>
+              <li>Video Content Creation</li>
+              <li>UI/UX Design</li>
+              <li>Print Design</li>
+              <li>Logo Design</li>
+            </ul>
+          </div>
+          <img class="creative-image" alt="" src="creative-img.svg" />
+        </div>
+        <div class="market">
+          <img class="market-ad-image" alt="" src="market-img.svg" />
+          <div class="market-container">
+            <b class="marketing-advertisement">Marketing & Advertisement</b>
+            <ul class="service-ul">
+              <li>Content Promotion</li>
+              <li>Search Engine Optimization</li>
+              <li>Social Media Marketing</li>
+              <li>Conversion Rate Optimization</li>
+              <li>Google Analytics & Reporting</li>
+              <li>Digital Media Planning</li>
+              <li>Influencer & Celebrity Campaign</li>
+            </ul>
+          </div>
+        </div>
+        <div class="dev">
+          <div class="dev-container">
+            <b class="development">Development</b>
+            <ul class="service-ul">
+              <li>Content Promotion</li>
+              <li>Search Engine Optimization</li>
+              <li>Social Media Marketing</li>
+              <li>Conversion Rate Optimization</li>
+              <li>Google Analytics & Reporting</li>
+              <li>Digital Media Planning</li>
+              <li>Influencer & Celebrity Campaign</li>
+            </ul>
+          </div>
+          <img class="dev-image" alt="" src="dev-img.svg" />
+        </div>
+    </Section>
+  </main>
+  <footer></footer>
+  <!-- Include EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
