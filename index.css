@@ -59,6 +59,18 @@ main {
     top: 2.8rem;
     right: 3rem;
     z-index: 1000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.close-menu{
+    display: none;
+    cursor: pointer;
+    font-size: 3rem;
+    position: fixed;
+    top: 2.2rem;
+    right: 2.8rem;
+    z-index: 1000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 nav {
@@ -103,27 +115,18 @@ nav li {
 
 nav.scrolled .menu-toggle {
     display: block;
-    /* Show the hamburger icon when scrolling */
 }
 
-/* Dropdown menu styles */
 .dropdown-menu {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Positioning below the menu toggle */
-    top: 3.2rem;
-    /* Adjust this value to position below the hamburger icon */
+    top: 5rem;
     right: 3rem;
-    /* Align with the hamburger icon */
     background-color: white;
-    /* Background color */
     border: 1px solid #ccc;
-    /* Border for visibility */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    /* Subtle shadow */
     z-index: 999;
-    /* Above other elements */
+    border-radius: 1rem;
 }
 
 .dropdown-menu ul {
@@ -157,7 +160,7 @@ nav.scrolled .menu-toggle {
     /* Show the menu */
     background-color: rgba(187, 171, 27, 0.08);
     border: none;
-    width: 10rem;
+    width: 12rem;
 }
 
 #hero-section {
@@ -170,19 +173,6 @@ nav.scrolled .menu-toggle {
     background-image: url(bg-video.mp4);
     height: 100%;
     overflow: hidden;
-}
-
-.background-video {
-    position: absolute;
-    left: 50%;
-    top: 62%;
-    width: 100%;
-    height: 150%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    opacity: 0.5;
-    display: none;
 }
 
 .hero-container {
@@ -275,6 +265,22 @@ nav.scrolled .menu-toggle {
     color: #b24b1a;
 }
 
+.transition-heading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.transition-heading.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.design { transition-delay: 0.2s; }
+.development-and { transition-delay: 0.4s; }
+.digital-marketing { transition-delay: 0.6s; }
+
+
 .consultation-box {
     display: flex;
     justify-content: center;
@@ -339,6 +345,8 @@ input#email {
     background-color: rgba(251, 247, 247, 0.8);
     width: 10rem;
     height: 2.5rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #request-button {
@@ -360,6 +368,236 @@ input#email {
     background-color: rgba(213, 175, 21, 0.50);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.alert {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+    bottom: 4rem;
+    font-family: 'Noto Sans';
+}
+
+.success {
+    color: rgb(76, 188, 76);
+    border: none;
+}
+
+.error {
+    color: rgb(233, 59, 59);
+    border: none;
+}
+
+
+#services-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}    
+
+h2.services-included {
+    font-family: 'Noto Sans';
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0.5rem;
+}
+
+.connect{
+    color: chocolate;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-block-start: 5%;
+    margin-block-end: 5%;
+}
+
+.creative, .market, .dev  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin: 2.5% 0;
+}
+
+img.creative-image, img.market-ad-image, img.dev-image {
+    width: 30%;
+    height: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.creative-container, .market-container, .dev-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 2rem;
+    background-color: rgba(214, 210, 174, 0.1);
+    width: 30%;
+    height: 25rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.creative-container, .dev-container {
+    right: 2.5%;
+}
+
+.market-container{
+    left: 2.5%;
+}
+
+b.creative1, .marketing-advertisement, .development {
+    color: chocolate;
+    font-family: 'Noto Sans';
+    font-size: 2rem;
+    font-weight: 800;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+ul.service-ul{
+    position: relative;
+    font-family: 'Noto Sans';
+    font-size: 1.25rem;
+    margin: 2rem;
+}
+
+/* Hide list items initially */
+ul.service-ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Active class for visible list items */
+ul.service-ul li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*
+#serv-know-button {
+    position: absolute;
+    top: 116.688rem;
+    left: 28rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: var(--br-11xl);
+    background-color: rgba(187, 171, 27, 0.35);
+    width: 11.875rem;
+    height: 3.75rem;
+    font-size: var(--font-size-xl);
+    color: #151414;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+#serv-know-button:hover {
+    background-color: rgba(187, 171, 27, 0.45);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+*/
+
+@media (min-width:1101px) and (max-width: 1341px){
+    html,
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    nav a {
+        padding: 12px 18px;
+    }
+
+    .company-title {
+        font-size: 3.75rem;
+        line-height: 4.5rem;
+    }
+
+    .moto {
+        font-size: 1.35rem;
+        line-height: 1.35rem;
+    }
+
+    .design,
+    .development-and,
+    .digital-marketing {
+        font-size: 2.75rem;
+        line-height: 3.25rem;
+    }
+
+    input#first-name,
+    input#email {
+        font-size: 0.95rem;
+        line-height: 3.25rem;
+    }
+
+    #request-button {
+        font-size: 0.95rem;
+    }
+
+    h2.services-included {
+        font-size: 3.25rem;
+    }
+
+    .services-container {
+        margin-block-start: 4%;
+        margin-block-end: 4%;
+    }
+
+    .creative-container, .market-container, .dev-container {
+        height: 22.5rem;
+        position: relative;
+        padding: 0.6rem;
+    }
+
+    .creative, .market, .dev  {
+        margin: 2% 0;
+    }
+
+    .creative-container, .dev-container {
+        right: 2%;
+    }
+
+    .market-container{
+        left: 2%;
+    }
+
+    b.creative1, .marketing-advertisement, .development {
+        font-size: 2rem;
+    }
+
+    ul.service-ul{
+        font-size: 1rem;
+        margin: 1.25rem;
+    }
+
+    img.creative-image, img.market-ad-image, img.dev-image {
+        top: 1rem;
+        position: relative;
+    }
+
+}
+
 
 @media (min-width: 841px) and (max-width: 1100px) {
 
@@ -402,9 +640,50 @@ input#email {
     #request-button {
         font-size: 0.85rem;
     }
+
+    h2.services-included {
+        font-size: 3rem;
+    }
+
+    .services-container {
+        margin-block-start: 3.5%;
+        margin-block-end: 3.5%;
+    }
+
+    .creative-container, .market-container, .dev-container {
+        height: 20rem;
+        position: relative;
+        padding: 0.5rem;
+    }
+
+    .creative, .market, .dev  {
+        margin: 1.75% 0;
+    }
+
+    .creative-container, .dev-container {
+        right: 1.8%;
+    }
+
+    .market-container{
+        left: 1.8%;
+    }
+
+    b.creative1, .marketing-advertisement, .development {
+        font-size: 1.75rem;
+    }
+
+    ul.service-ul{
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    img.creative-image, img.market-ad-image, img.dev-image {
+        top: 2rem;
+        position: relative;
+    }
 }
 
-@media (width: 841px) {
+@media (min-width: 842px) and (max-width: 905px){
 
     html,
     body {
@@ -479,6 +758,32 @@ input#email {
     .mail-box,
     .request-box {
         margin-left: 2.5rem;
+    }
+
+    .creative, .market, .dev  {
+        margin: 1.65% 0;
+    }
+
+    .creative-container, .dev-container {
+        right: 1.5%;
+    }
+
+    .market-container{
+        left: 1.5%;
+    }
+
+    b.creative1, .marketing-advertisement, .development {
+        font-size: 1.6rem;
+    }
+
+    ul.service-ul{
+        font-size: 0.9rem;
+        margin: 1rem;
+    }
+
+    img.creative-image, img.market-ad-image, img.dev-image {
+        top: 2.5rem;
+        position: relative;
     }
 
 }
@@ -561,6 +866,47 @@ input#email {
     .mail-box,
     .request-box {
         margin-left: 2.5rem;
+    }
+
+    h2.services-included {
+        font-size: 2.5rem;
+    }
+
+    .services-container {
+        margin-block-start: 3%;
+        margin-block-end: 3%;
+    }
+
+    .creative-container, .market-container, .dev-container {
+        height: 18rem;
+        position: relative;
+        padding: 0.25rem;
+    }
+
+    .creative, .market, .dev  {
+        margin: 1.5% 0;
+    }
+
+    .creative-container, .dev-container {
+        right: 1.5%;
+    }
+
+    .market-container{
+        left: 1.5%;
+    }
+
+    b.creative1, .marketing-advertisement, .development {
+        font-size: 1.5rem;
+    }
+
+    ul.service-ul{
+        font-size: 0.8rem;
+        margin: 1rem;
+    }
+
+    img.creative-image, img.market-ad-image, img.dev-image {
+        top: 3rem;
+        position: relative;
     }
 
 }
@@ -695,4 +1041,42 @@ input#email {
         font-size: 90%;
     }
 
+    h2.services-included {
+        font-size: 2rem;
+        width: 100vw;
+    }
+
+    .services-container {
+        margin-block-start: 2%;
+        margin-block-end: 2%;
+    }
+
+    .creative-container, .market-container, .dev-container {
+        height: 15rem;
+        position: relative;
+        padding: 0.25rem;
+        width: 75vw;
+        left: 0;
+        right: 0;
+    }
+
+    .creative, .market, .dev  {
+        margin: 1.5% 0;
+        width: 100vw;
+    }
+
+    b.creative1, .marketing-advertisement, .development {
+        font-size: 1rem;
+    }
+
+    ul.service-ul{
+        font-size: 80%;
+        margin: 8%;
+    }
+
+    img.creative-image, img.market-ad-image, img.dev-image {
+       display: none;
+    }
+
 }
+
